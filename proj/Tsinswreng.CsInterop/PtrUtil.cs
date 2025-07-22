@@ -1,6 +1,6 @@
 using static System.Runtime.InteropServices.NativeMemory;
 using static System.Runtime.InteropServices.Marshal;
-namespace CsShared.Interop;
+namespace Tsinswreng.CsInterop;
 unsafe public static class PtrUtil{
 	public static T* New<T>()where T:unmanaged{
 		return (T*)AllocZeroed((nuint)SizeOf<T>());
@@ -8,11 +8,11 @@ unsafe public static class PtrUtil{
 
 	public static nil FreeEtNull<T>(ref T* ptrRef)where T:unmanaged{
 		if(ptrRef == null){
-			return null!;
+			return NIL;
 		}
 		Free(ptrRef);
 		ptrRef = null;
-		return null!;
+		return NIL;
 	}
 
 

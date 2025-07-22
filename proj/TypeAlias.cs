@@ -13,7 +13,7 @@ global using str = System.String;
 global using obj = System.Object;
 global using nil = System.Object;
 
-global using static Nil_;
-public struct Nil_{
-	public const nil Nil = null!;
+global using static Nil;
+public struct Nil{
+	public const nil NIL = null!;
 }

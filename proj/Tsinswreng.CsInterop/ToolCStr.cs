@@ -6,9 +6,9 @@ namespace Tsinswreng.CsInterop;
 /// <summary>
 /// TODO test
 /// </summary>
-public static unsafe class ToolCStr{
+public static unsafe class CStrUtil{
 
-	public static str? ToCsStr(u8* cStr){
+	public static string? ToCsStr(byte* cStr){
 
 		if (cStr == null){ return null;}
 
@@ -27,9 +27,9 @@ public static unsafe class ToolCStr{
 	}
 
 
-	public static u8* ToCStr(str? csStr){
+	public static byte* ToCStr(string? csStr){
 		if (csStr == null){ return null;}
-		return (u8*)Marshal.StringToCoTaskMemUTF8(csStr);
+		return (byte*)Marshal.StringToCoTaskMemUTF8(csStr);
 	}
 
 }

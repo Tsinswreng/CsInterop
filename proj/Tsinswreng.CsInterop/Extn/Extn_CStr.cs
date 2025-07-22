@@ -1,6 +1,11 @@
-namespace CsShared.Interop.Extn;
-unsafe public static class Extn_CStr {
+namespace Tsinswreng.CsInterop.Extn;
+unsafe public static class ExtnCStr {
+	/// <summary>
+	/// 會創新ʹ匪託管ʹC字串 需注意回收
+	/// </summary>
+	/// <param name="z"></param>
+	/// <returns></returns>
 	public static byte* CStr(this string? z){
-		return Interop.CStrUtil.ToCStr(z);
+		return CStrUtil.ToCStr(z);
 	}
 }
