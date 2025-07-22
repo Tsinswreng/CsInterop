@@ -13,7 +13,10 @@ global using str = System.String;
 global using obj = System.Object;
 global using nil = System.Object;
 
-global using static Nil;
-public struct Nil{
-	public const nil NIL = null!;
+global using static Tsinswreng.CsInterop.Nil;
+namespace Tsinswreng.CsInterop{
+	public struct Nil{
+		public const nil NIL = null!;
+	}
 }
+
