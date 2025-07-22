@@ -6,7 +6,7 @@ namespace Tsinswreng.CsInterop;
 /// <summary>
 /// TODO test
 /// </summary>
-public static unsafe class CStrUtil{
+public static unsafe class ToolCStr{
 
 	public static string? ToCsStr(byte* cStr){
 

@@ -6,6 +6,6 @@ unsafe public static class ExtnCStr {
 	/// <param name="z"></param>
 	/// <returns></returns>
 	public static byte* CStr(this string? z){
-		return CStrUtil.ToCStr(z);
+		return ToolCStr.ToCStr(z);
 	}
 }
