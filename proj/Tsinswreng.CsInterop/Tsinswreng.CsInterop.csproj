@@ -1,13 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-<PropertyGroup>
+	<PropertyGroup>
+	<!-- dotnet pack -c Release -->
+		<Version>0.0.1</Version>
+		<Authors>Tsinswreng</Authors>
+		<Company>Tsinswreng</Company>
+		<Description>C# Interop Tools</Description>
+		<RepositoryUrl>https://github.com/Tsinswreng/CsInterop</RepositoryUrl>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageTags>utility;csharp;library</PackageTags>
 		<OutputType>Library</OutputType>
 		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+		<!-- <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally> -->
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<PublishAot>true</PublishAot>
+		<!-- <PublishAot>true</PublishAot> -->
 	</PropertyGroup>
 	<ItemGroup>
 		<Compile Include="../TypeAlias.cs" />
