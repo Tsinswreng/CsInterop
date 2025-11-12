@@ -2,7 +2,8 @@
 
 	<PropertyGroup>
 	<!-- dotnet pack -c Release -->
-		<Version>0.0.2-alpha</Version>
+	<!-- 2025-11-12T22:00:40.754+08:00_W46-3 -->
+		<Version>0.1.0.25463</Version>
 		<Authors>Tsinswreng</Authors>
 		<Company>Tsinswreng</Company>
 		<Description>C# Interop Tools</Description>
