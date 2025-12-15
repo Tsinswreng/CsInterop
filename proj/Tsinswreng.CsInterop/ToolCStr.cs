@@ -27,9 +27,18 @@ public static unsafe class ToolCStr{
 	}
 
 
-	public static byte* ToCStr(string? csStr){
-		if (csStr == null){ return null;}
-		return (byte*)Marshal.StringToCoTaskMemUTF8(csStr);
+	public static byte* ToCStr(string? CsStr){
+		if (CsStr == null){ return null;}
+		//AI曰 斯類API須 配套ᵈ 用、StringToCoTaskMemUTF8ʃ產ˋ叵用NativeMemory㕥釋
+		//return (byte*)Marshal.StringToCoTaskMemUTF8(CsStr);
+		int len = Encoding.UTF8.GetByteCount(CsStr);
+		var R = (byte*)NativeMemory.Alloc((nuint)(len + 1)); // +1 给 '\0'
+
+		fixed (char* src = CsStr){
+			Encoding.UTF8.GetBytes(src, CsStr.Length, R, len);
+		}
+		R[len] = 0; // 手动补 0 结尾
+		return R;
 	}
 
 }

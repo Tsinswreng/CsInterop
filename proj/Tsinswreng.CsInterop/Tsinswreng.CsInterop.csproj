@@ -16,7 +16,7 @@
 		<Nullable>enable</Nullable>
 		<!-- <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally> -->
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<!-- <PublishAot>true</PublishAot> -->
+		<PublishAot>true</PublishAot>
 	</PropertyGroup>
 	<ItemGroup>
 		<Compile Include="../TypeAlias.cs" />
